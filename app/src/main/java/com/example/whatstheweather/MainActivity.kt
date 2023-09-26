@@ -118,5 +118,7 @@ class MainActivity : AppCompatActivity() {
 
         city = findViewById(R.id.city)
         weather = findViewById(R.id.Weather)
+
+        var name = "Kanak"
     }
 }
