@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         object : WeatherDownload() {}
 
         try {
-            task.execute("https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=b30a0fa427a7b3cdbd37ab4a0cce7039").get()
+            task.execute("https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=b30a0fa427a7b3cdbd37ab4a0cce7039&units=metric").get()
         }catch (e : Exception){
             e.printStackTrace()
         }
@@ -80,6 +80,8 @@ class MainActivity : AppCompatActivity() {
                 val jsonObject: JSONObject = object : JSONObject(result.toString()) {}
 
                 val weatherData: String = jsonObject.getString("weather")
+                val temp: JSONObject = jsonObject.getJSONObject("main")
+                val wind: JSONObject = jsonObject.getJSONObject("wind")
 
                 Log.i("Weather Content", weatherData)
 
@@ -95,6 +97,20 @@ class MainActivity : AppCompatActivity() {
                     if(main != "" && description != ""){
                         message += "$main: $description\n"
                     }
+                }
+
+                val temperature: String = temp.getString("temp")
+                val humidity : String = temp.getString("humidity")
+
+                if(temperature != "" && humidity != "") {
+                    message += "Temp: $temperature \u2103 \n"
+                    message += "Humidity: $humidity %\n"
+                }
+
+                val speed: String = wind.getString("speed")
+
+                if(speed != ""){
+                    message += "Wind Speed: $speed m/s\n"
                 }
 
                 if(message != ""){
