@@ -4,14 +4,14 @@ Welcome to WeatherFinder, your ultimate Android app for finding the weather in a
 
 ## Table of Contents
 
-* Features
-* Installation
-* Usage
-* Screenshots
-* Technologies Used
-* API
-* Contributing
-* Contact
+* [Features](##Features)
+* [Installation](##Installation)
+* [Usage](##Usage)
+* [Screenshots](##Screenshots)
+* [Technologies Used](##Technologies-Used)
+* [API](##API)
+* [Contributing](##Contributing)
+* [Contact](##Contact)
   
 ## Features
   
