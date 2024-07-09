@@ -32,13 +32,13 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/weatherfinder.git
+git clone https://github.com/kanak27/Weather.git
 ```
 2. Open the project in Android Studio:
 
     * Open Android Studio.
     * Click on Open an existing project.
-    *  Navigate to the cloned repository and select it.
+    * Navigate to the cloned repository and select it.
 3. Sync project with Gradle files:
 
     * Once the project is opened, Android Studio will prompt you to sync the project with Gradle files. Click 'Sync Now'.
